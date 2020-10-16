@@ -20,6 +20,7 @@ class AuthorizeRequestTest extends TestCase
 	private $successUrl = 'https://successurl.com';
 	private $failureUrl = 'https://failureUrl.com';
 	private $description = 'this is the description';
+	private $paymentType = 'Regular';
 
 	public function setUp(): void
 	{
@@ -88,7 +89,8 @@ class AuthorizeRequestTest extends TestCase
 			'currency' => $this->currency,
 			'success_url' => $this->successUrl,
 			'failure_url' => $this->failureUrl,
-			'description' => $this->description
+			'description' => $this->description,
+			'payment_type' => $this->paymentType,
 		];
 
 		if ($secure) {
