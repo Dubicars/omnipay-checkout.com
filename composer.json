@@ -1,5 +1,6 @@
 {
     "name": "dubicars/omnipay-checkout.com",
+    "description": "Checkout.com driver for the Omnipay PHP payment processing library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
