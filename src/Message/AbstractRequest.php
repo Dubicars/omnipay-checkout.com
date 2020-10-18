@@ -2,32 +2,31 @@
 
 namespace Omnipay\CheckoutCom\Message;
 
-
 class AbstractRequest
 {
-	private $liveUrl = "https://api.checkout.com";
-	private $sandboxUrl = "https://api.sandbox.checkout.com";
-	protected $parameters;
+    private $liveUrl = "https://api.checkout.com";
+    private $sandboxUrl = "https://api.sandbox.checkout.com";
+    protected $parameters;
 
-	protected function getUrl($path = '')
-	{
-		$url = $this->getTestMode() ? $this->sandboxUrl : $this->liveUrl;
-		return $url . '/' . $path;
-	}
+    protected function getUrl($path = '')
+    {
+        $url = $this->getTestMode() ? $this->sandboxUrl : $this->liveUrl;
+        return $url . '/' . $path;
+    }
 
-	/**
-	 * @return mixed
-	 */
-	public function getTestMode()
-	{
-		return $this->parameters->get('testMode', true);
-	}
+    /**
+     * @return mixed
+     */
+    public function getTestMode()
+    {
+        return $this->parameters->get('testMode', true);
+    }
 
-	/**
-	 * @param mixed $testMode
-	 */
-	public function setTestMode($testMode)
-	{
-		$this->parameters->set('testMode', $testMode);
-	}
+    /**
+     * @param mixed $testMode
+     */
+    public function setTestMode($testMode)
+    {
+        $this->parameters->set('testMode', $testMode);
+    }
 }

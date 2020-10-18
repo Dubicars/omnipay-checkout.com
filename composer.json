@@ -1,5 +1,6 @@
 {
     "name": "dubicars/omnipay-checkout.com",
+    "description": "Checkout.com driver for the Omnipay PHP payment processing library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -18,6 +19,12 @@
     },
     "minimum-stability": "stable",
     "require-dev": {
-        "phpunit/phpunit": "^8.3"
+        "phpunit/phpunit": "^8.3",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "scripts": {
+        "fix": "php-cs-fixer fix --using-cache=no ./src",
+        "lint": "php-cs-fixer fix --dry-run --using-cache=no --verbose ./src",
+        "test": "phpunit tests"
     }
 }
