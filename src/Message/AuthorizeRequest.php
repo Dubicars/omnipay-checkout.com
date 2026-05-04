@@ -45,7 +45,7 @@ class AuthorizeRequest extends AbstractRequest implements MessageInterface
 
 		$params = [
 			'source' => $source,
-			'amount' => (int)$parameters['amount'] * 100,
+			'amount' => $parameters['amount'] * 100,
 			'currency' => strtoupper($parameters['currency']),
 			'success_url' => $parameters['returnUrl'] ?? null,
 			'failure_url' => $parameters['cancelUrl'] ?? null,
